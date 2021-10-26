@@ -26,34 +26,6 @@ fairseq-train \
 
 
 
-    --source-lang ice.g \
-    --target-lang ice.p \
-    --arch lstm \
-    --encoder-bidirectional \
-    --batch-size 50 \
-    --max-update 800 \
-    --criterion label_smoothed_cross_entropy \
-    --encoder-hidden-size 128 \
-    --decoder-hidden-size 128 \
-    --decoder-out-embed-dim 512 \
-    --dropout 0.2 \
-    --encoder-embed-dim 512 \
-    --label-smoothing 0.1 \
-    --optimizer adam \
-    --lr 0.001 \
-    --clip-norm 1 \
-    --log-format simple \
-    --cpu
-
-
-
-
-
-
-
-
-
-
     fairseq-generate \
         data-bin \
         --source-lang ice.g \

@@ -16,5 +16,5 @@ def calc_accuracy():
             if phone1_list == phone2_list:
                 count += 1
             wer = ((len(phone1List) - count) / len(phone1List)) * 100
-    return wer
+    return wer #17
 calc_accuracy()

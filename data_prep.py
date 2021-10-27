@@ -1,8 +1,5 @@
 #!/usr/bin/env python
-
-import argparse
 import csv
-
 
 
 def main():
@@ -11,11 +8,13 @@ def main():
         for grapheme,phoneme in csv_reader:
             print(" ".join(grapheme), file=sink)
 
+            
     with open("ice_train.tsv","r") as train, open("prepped_data/train.ice.p","w+") as sink:
         csv_reader = csv.reader(train,delimiter="\t")
         for grapheme,phoneme in csv_reader:
             print(" ".join(grapheme), file=sink)
 
+      
     with open("ice_dev.tsv","r") as dev, open("prepped_data/dev.ice.p","w+") as sink:
         csv_reader = csv.reader(dev,delimiter="\t")
         for grapheme,phoneme in csv_reader:
@@ -26,5 +25,4 @@ def main():
         csv_reader = csv.reader(test,delimiter="\t")
         for grapheme,phoneme in csv_reader:
             print(" ".join(phoneme), file=sink)
-
 main()

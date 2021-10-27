@@ -1,8 +1,5 @@
 #!/usr/bin/env python
-
-import argparse
 import csv
-
 
 
 def main():
@@ -26,5 +23,4 @@ def main():
         csv_reader = csv.reader(test,delimiter="\t")
         for grapheme,phoneme in csv_reader:
             print(" ".join(phoneme), file=sink)
-
 main()

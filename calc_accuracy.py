@@ -2,7 +2,6 @@
 import csv
 import logging
 
-print("in ccheck accuracy file")
 
 def calc_accuracy():
     count = 0

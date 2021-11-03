@@ -8,9 +8,7 @@ def calc_accuracy():
     print("count: ", count)
     with open("column_phones.tok", "r") as source:
         csv_reader = csv.reader(source, delimiter="\t")
-        phone1List = []
         for phone1, phone2 in csv_reader:
-            phone1List.append(phone1)
             if phone1 == phone2:
                 count += 1
             wer = ((len(phone1List) - count) / len(phone1List)) * 100 #17.0

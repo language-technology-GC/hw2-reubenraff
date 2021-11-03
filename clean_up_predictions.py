@@ -10,8 +10,7 @@ with open("predictions.txt", "r") as source, open("clean_phones.tok", "w") as si
     for line in csv_reader:
         tag = line[0]
         if "H-" in tag:
-            print("".join(line[-1].rstrip()))
-            h_list.append("".join(line[-1]) + "\t")
+            h_list.append("".join(line[-1].rstrip()) + "\t")
         if "T-" in tag:
             # print(line)
             t_list.append("".join(line[-1]))

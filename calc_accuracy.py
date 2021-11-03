@@ -19,6 +19,6 @@ def calc_accuracy():
                 count += 1
             wer = ((len(phone1List) - count) / len(phone1List)) * 100
     return wer
-print(calc_accuracy())
+calc_accuracy()
 
 # 17.0
